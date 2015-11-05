@@ -6,7 +6,7 @@ public class Game{
     static JFrame jf;
 	public static void main(String[] args){
 		jf=new JFrame();
-		jf.setTitle("���ߵ�Ļ");
+		jf.setTitle("±©×ßµ¯Ä»");
 		jf.setDefaultCloseOperation(3);
 		jf.setResizable(false);
 		jf.setBounds((int)(Toolkit.getDefaultToolkit().getScreenSize().getWidth()-640)/2,(int)(Toolkit.getDefaultToolkit().getScreenSize().getHeight()-640)/2,640,640);
@@ -15,3 +15,4 @@ public class Game{
 		jf.setVisible(true);
 	}
 }
+
