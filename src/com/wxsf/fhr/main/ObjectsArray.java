@@ -53,15 +53,15 @@ public class ObjectsArray
 
     }
 
-    public SuperObject getEmpty()			//·µ»Ø¿ÕÏĞÊı×éÎ»
+    public SuperObject getEmpty()			//è¿”å›ç©ºé—²æ•°ç»„ä½
     {
         for(i = 0; i < arrayMax; i++)
         {
-            if(!gameObject[emptySearch].getExist())			//Èç¹û¸ÃÊı×éÎ»Î´±»Õ¼ÓÃ
-                return gameObject[emptySearch];				//´«»Ø¸ÃÊı×é
-            emptySearch++;												//ÏÂ±ê+1
-            if(emptySearch >= arrayMax)						//Èç¹ûÏÂ±ê³¬¹ı¹æ¶¨Êı×é
-                emptySearch = 0;							//·µ»ØµÚÁãÎ»Êı×é
+            if(!gameObject[emptySearch].getExist())			//å¦‚æœè¯¥æ•°ç»„ä½æœªè¢«å ç”¨
+                return gameObject[emptySearch];				//ä¼ å›è¯¥æ•°ç»„
+            emptySearch++;												//ä¸‹æ ‡+1
+            if(emptySearch >= arrayMax)						//å¦‚æœä¸‹æ ‡è¶…è¿‡è§„å®šæ•°ç»„
+                emptySearch = 0;							//è¿”å›ç¬¬é›¶ä½æ•°ç»„
         }
 
         return null;
