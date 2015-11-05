@@ -15,4 +15,3 @@ public class Game{
 		jf.setVisible(true);
 	}
 }
-
