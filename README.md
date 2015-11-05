@@ -12,6 +12,13 @@
 ● ⑨：集束弹幕<br>
 <br>
 ![灵梦d](http://i12.tietuku.com/b54d866a7f619e98t.jpg)  ![琪露诺d](http://i12.tietuku.com/88713cce0fcf9800t.jpg)<br>
+####◎BOSS关卡<br>
+● 普通状态<br>
+<br>
+![BOSS](http://i12.tietuku.com/2695955fd2cc713ft.jpg)<br>
+<br>
+● 半血进入狂怒状态<br>
+![BOSS](http://i12.tietuku.com/dad9c988f5920af9t.jpg)<br>
 ####◎游戏操作<br>
 Z：射击<br>
 X：取消<br>
