@@ -27,17 +27,17 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
         resetInterval = 0;
         backLoop = 0;
 		menuMode =9;
-        ImageIcon imageicon = new ImageIcon(getClass().getResource("/image/objects.png"));		//Ω«…´+BOOS√«µƒ–Ú¡–Õº
+        ImageIcon imageicon = new ImageIcon(getClass().getResource("/image/objects.png"));		//ËßíËâ≤+BOOS‰ª¨ÁöÑÂ∫èÂàóÂõæ
         image = imageicon.getImage();
-        ImageIcon imageicon1 = new ImageIcon(getClass().getResource("/image/bg1.jpg"));		//±≥æ∞
+        ImageIcon imageicon1 = new ImageIcon(getClass().getResource("/image/bg1.jpg"));		//ËÉåÊôØ
         backImage = imageicon1.getImage();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/image/character.png"));			//—°»ÀΩÁ√Ê–Ú¡–Õº
+        ImageIcon ic = new ImageIcon(getClass().getResource("/image/character.png"));			//ÈÄâ‰∫∫ÁïåÈù¢Â∫èÂàóÂõæ
         show=ic.getImage();
         ImageIcon ibak = new ImageIcon(getClass().getResource("/image/redwhitebak.png"));
         redwhitebak=ibak.getImage();
         ibak = new ImageIcon(getClass().getResource("/image/9bak.png"));
         _9bak=ibak.getImage();
-        //////////////////////“Ù–ß
+        //////////////////////Èü≥Êïà
         Ashoot=new AudioClip[17];
         Ashoot1=new AudioClip[17];
         for(int j = 0; j < 17; j++)
@@ -95,23 +95,23 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
     }
     public void mousePressed(MouseEvent e){
     	checkP=e.getPoint();
-    	//∑‚√Ê////////////////////////
+    	//Â∞ÅÈù¢////////////////////////
     	if(menuMode==9){
-    	if((checkP.getX()>=463 && checkP.getX()<=563) && (checkP.getY()>=416 && checkP.getY()<=448))	//ø™ º”Œœ∑
+    	if((checkP.getX()>=463 && checkP.getX()<=563) && (checkP.getY()>=416 && checkP.getY()<=448))	//ÂºÄÂßãÊ∏∏Êàè
     		setMenuMode(1);
-    	if((checkP.getX()>=463 && checkP.getX()<=515) && (checkP.getY()>=450 && checkP.getY()<=482))	//Àµ√˜
+    	if((checkP.getX()>=463 && checkP.getX()<=515) && (checkP.getY()>=450 && checkP.getY()<=482))	//ËØ¥Êòé
     		setMenuMode(8);
-    	if((checkP.getX()>=463 && checkP.getX()<=563) && (checkP.getY()>=482 && checkP.getY()<=514))	//÷∆◊˜√˚µ•
+    	if((checkP.getX()>=463 && checkP.getX()<=563) && (checkP.getY()>=482 && checkP.getY()<=514))	//Âà∂‰ΩúÂêçÂçï
     		setMenuMode(7);
-    	if((checkP.getX()>=463 && checkP.getX()<=563) && (checkP.getY()>=514 && checkP.getY()<=546))	//ÕÀ≥ˆ
+    	if((checkP.getX()>=463 && checkP.getX()<=563) && (checkP.getY()>=514 && checkP.getY()<=546))	//ÈÄÄÂá∫
     		setMenuMode(6);
     	}
-    	//Àµ√˜//////////////////////
+    	//ËØ¥Êòé//////////////////////
     	if(menuMode==8){
         	if((checkP.getX()>=486 && checkP.getX()<=600) && (checkP.getY()>=550 && checkP.getY()<=600))	
         		setMenuMode(9);
     	}
-        if(menuMode == 3)					//bossÀ¿Õˆ
+        if(menuMode == 3)					//bossÊ≠ª‰∫°
         {
         	gameSet();
         	if((checkP.getX()>=60 && checkP.getX()<=236) && (checkP.getY()>=509 && checkP.getY()<=593))	
@@ -119,7 +119,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
         	if((checkP.getX()>=363 && checkP.getX()<=585) && (checkP.getY()>=501 && checkP.getY()<=596))	
         		setMenuMode(9);
         }
-        if(menuMode == 4)					//ÕÊº“À¿Õˆ
+        if(menuMode == 4)					//Áé©ÂÆ∂Ê≠ª‰∫°
         {
         	gameSet();
         	if((checkP.getX()>=60 && checkP.getX()<=236) && (checkP.getY()>=509 && checkP.getY()<=593))	
@@ -131,23 +131,23 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
     public void mouseReleased(MouseEvent e){
     	
     }
-    public void gameSet()					//”Œœ∑≥ı¥Œ‘ÿ»Î
+    public void gameSet()					//Ê∏∏ÊàèÂàùÊ¨°ËΩΩÂÖ•
     {
         do_reset = false;
-        resetInterval = 1;					//◊”µØÀØ√ﬂ ±º‰
+        resetInterval = 1;					//Â≠êÂºπÁù°Áú†Êó∂Èó¥
         menuMode = 9;
-        player.setData(312D, 539D, 0.0D, 0.0D, 4, 0, 0, 5, NowCharacter);		//‘ÿ»ÎΩ«…´–≈œ¢
+        player.setData(312D, 539D, 0.0D, 0.0D, 4, 0, 0, 5, NowCharacter);		//ËΩΩÂÖ•ËßíËâ≤‰ø°ÊÅØ
         shoots.allErase();
         bullets.allErase();
         enemys.allErase();
         effects.allErase();
     }
-    public void gameReset()					//”Œœ∑÷ÿ–¬‘ÿ»Î
+    public void gameReset()					//Ê∏∏ÊàèÈáçÊñ∞ËΩΩÂÖ•
     {
         do_reset = false;
-        resetInterval = 1;					//◊”µØº‰∏Ù ±º‰
+        resetInterval = 1;					//Â≠êÂºπÈó¥ÈöîÊó∂Èó¥
         menuMode = 1;
-        player.setData(312D, 539D, 0.0D, 0.0D, 4, 0, 0, 5, NowCharacter);		//‘ÿ»ÎΩ«…´–≈œ¢
+        player.setData(312D, 539D, 0.0D, 0.0D, 4, 0, 0, 5, NowCharacter);		//ËΩΩÂÖ•ËßíËâ≤‰ø°ÊÅØ
         shoots.allErase();
         bullets.allErase();
         enemys.allErase();
@@ -168,7 +168,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
         }
     }
 
-    private void gameRender()		//”Œœ∑◊ ‘¥‘ÿ»Î
+    private void gameRender()		//Ê∏∏ÊàèËµÑÊ∫êËΩΩÂÖ•
     {
         if(dbImage == null)
         {
@@ -177,8 +177,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 return;
             g = dbImage.getGraphics();
         }			
-        ///////////////////////—≠ª∑±≥æ∞//////////////////////////////	
-        backLoop = (backLoop + 8) % 640;			//√ø÷°œ¬“∆8œÒÀÿ£¨¿€ª˝“∆∂Ø≥¨π˝640œÒÀÿ»°”‡Œ™≥ı º ˝÷ÿ–¬¿€º∆
+        ///////////////////////Âæ™ÁéØËÉåÊôØ//////////////////////////////	
+        backLoop = (backLoop + 8) % 640;			//ÊØèÂ∏ß‰∏ãÁßª8ÂÉèÁ¥†ÔºåÁ¥ØÁßØÁßªÂä®Ë∂ÖËøá640ÂÉèÁ¥†Âèñ‰Ωô‰∏∫ÂàùÂßãÊï∞ÈáçÊñ∞Á¥ØËÆ°
         for(int i = -1; i < 2; i++)
         {
             for(int j = 0; j < 2; j++)
@@ -201,7 +201,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 g.fillRect(20, 40, 600, 12);
                 g.setColor(Color.GREEN);
                 g.fillRect(20, 40, (600 * k1) / 2000, 12);
-                System.out.println("boss≤–—™:"+k1);
+                System.out.println("bossÊÆãË°Ä:"+k1);
                 if(k1<=5)
                 {
                 	AbossDead1.play();
@@ -229,14 +229,14 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
         Image Score=iScore.getImage();
         g.drawImage(Score, 514, 0, null);
 
-        //////////////…˙√¸÷µ
+        //////////////ÁîüÂëΩÂÄº
         ImageIcon bloodbar = new ImageIcon(getClass().getResource("/image/bloodbar.png"));
         Image ibloodbar=bloodbar.getImage();
         g.drawImage(ibloodbar, 10, 500+(5-player.getLife())*17, 110, 600, 0, (5-player.getLife())*17, 100, 100, null);
         ImageIcon bloodbox = new ImageIcon(getClass().getResource("/image/box.png"));
         Image ibloodbox=bloodbox.getImage();
         g.drawImage(ibloodbox, 9, 499, null);
-        /////////////∑®¡¶÷µ
+        /////////////Ê≥ïÂäõÂÄº
         ImageIcon powerbar = new ImageIcon(getClass().getResource("/image/powerbar.png"));
         Image ipowerbar=powerbar.getImage();
         g.drawImage(ipowerbar, 520, 600-(player.getPower()/5), 620, 600, 0, (100-player.getPower()/5), 100, 100, null);
@@ -247,16 +247,16 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             g.setColor(Color.BLACK);
             g.fillRect(0, 0, 640, 640);
             g.setColor(Color.WHITE);
-            if(menuMode==9){						//”Œœ∑ø™ ºΩÁ√Ê
-            	ImageIcon imageicon = new ImageIcon(getClass().getResource("/image/startMenu.png"));		//Ω«…´+BOOS√«µƒ–Ú¡–Õº
+            if(menuMode==9){						//Ê∏∏ÊàèÂºÄÂßãÁïåÈù¢
+            	ImageIcon imageicon = new ImageIcon(getClass().getResource("/image/startMenu.png"));		//ËßíËâ≤+BOOS‰ª¨ÁöÑÂ∫èÂàóÂõæ
                 Image startMenu = imageicon.getImage();
-                imageicon = new ImageIcon(getClass().getResource("/image/start.png"));		//ø™ º∞¥≈•
+                imageicon = new ImageIcon(getClass().getResource("/image/start.png"));		//ÂºÄÂßãÊåâÈíÆ
                 Image start=imageicon.getImage();
-                imageicon = new ImageIcon(getClass().getResource("/image/help.png"));		//∞Ô÷˙
+                imageicon = new ImageIcon(getClass().getResource("/image/help.png"));		//Â∏ÆÂä©
                 Image help=imageicon.getImage();
-                imageicon = new ImageIcon(getClass().getResource("/image/Staff.png"));		//÷∆◊˜»À‘±
+                imageicon = new ImageIcon(getClass().getResource("/image/Staff.png"));		//Âà∂‰Ωú‰∫∫Âëò
                 Image Staff=imageicon.getImage();
-                imageicon = new ImageIcon(getClass().getResource("/image/Exit.png"));		//ÕÀ≥ˆ
+                imageicon = new ImageIcon(getClass().getResource("/image/Exit.png"));		//ÈÄÄÂá∫
                 Image Exit=imageicon.getImage();
                 ////////////////////////////////////////////
                 g.drawImage(startMenu, 0, 0, null);
@@ -264,18 +264,18 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 g.drawImage(help, 463, 450, 515, 482, 0, 0, 52, 32, null);
                 g.drawImage(Staff, 463, 482, 563, 514, 0, 0, 100, 32, null);
                 g.drawImage(Exit, 463, 514, 563, 546, 0, 0, 100, 32, null);
-                /////////////////////////////////////////// Û±Í“∆∂ØµΩ∞¥≈• «µƒ–ßπ˚
-            	if((moveP.getX()>=463 && moveP.getX()<=563) && (moveP.getY()>=416 && moveP.getY()<=448))	//ø™ º”Œœ∑
+                ///////////////////////////////////////////Èº†Ê†áÁßªÂä®Âà∞ÊåâÈíÆÊòØÁöÑÊïàÊûú
+            	if((moveP.getX()>=463 && moveP.getX()<=563) && (moveP.getY()>=416 && moveP.getY()<=448))	//ÂºÄÂßãÊ∏∏Êàè
             		g.drawRect(463, 416, 100, 32);
-            	if((moveP.getX()>=463 && moveP.getX()<=515) && (moveP.getY()>=450 && moveP.getY()<=482))	//Àµ√˜
+            	if((moveP.getX()>=463 && moveP.getX()<=515) && (moveP.getY()>=450 && moveP.getY()<=482))	//ËØ¥Êòé
             		g.drawRect(463, 450, 50, 32);
-            	if((moveP.getX()>=463 && moveP.getX()<=563) && (moveP.getY()>=482 && moveP.getY()<=514))	//÷∆◊˜√˚µ•
+            	if((moveP.getX()>=463 && moveP.getX()<=563) && (moveP.getY()>=482 && moveP.getY()<=514))	//Âà∂‰ΩúÂêçÂçï
             		g.drawRect(463, 482, 100, 32);
-            	if((moveP.getX()>=463 && moveP.getX()<=563) && (moveP.getY()>=514 && moveP.getY()<=546))	//ÕÀ≥ˆ
+            	if((moveP.getX()>=463 && moveP.getX()<=563) && (moveP.getY()>=514 && moveP.getY()<=546))	//ÈÄÄÂá∫
             		g.drawRect(463, 514, 100, 32);
 
             }
-            else if(menuMode == 8){						//Àµ√˜//TODO
+            else if(menuMode == 8){						//ËØ¥Êòé//TODO
             	ImageIcon imageicon = new ImageIcon(getClass().getResource("/image/help-page1.png"));
                 Image help = imageicon.getImage();
                 g.drawImage(help, 0, 0, null);
@@ -286,7 +286,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 	g.drawRect(486, 550, 114, 50);
             	}
             
-            else if(menuMode == 7){						//÷∆◊˜’ﬂ
+            else if(menuMode == 7){						//Âà∂‰ΩúËÄÖ
                 ImageIcon imageicon = new ImageIcon(getClass().getResource("/producer/Staff.png"));
                 Image staff = imageicon.getImage();
                 g.drawImage(staff, 0,0,null);
@@ -296,17 +296,17 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 if((moveP.getX()>=320 && moveP.getX()<=640) && (moveP.getY()>=320 && moveP.getY()<=640))
                 	g.drawImage(ET, 320, 320, null);
                 
-                ImageIcon iPanda = new ImageIcon(getClass().getResource("/producer/Panda.png"));			//¥Û Â
+                ImageIcon iPanda = new ImageIcon(getClass().getResource("/producer/Panda.png"));			//Â§ßÂèî
                 Image Panda = iPanda.getImage();
                 if((moveP.getX()>=0 && moveP.getX()<=320) && (moveP.getY()>=320 && moveP.getY()<=640))
                 	g.drawImage(Panda, 0, 320, null);
                 
-                ImageIcon iAhu = new ImageIcon(getClass().getResource("/producer/Ahu.png"));			//∞¢∫˙
+                ImageIcon iAhu = new ImageIcon(getClass().getResource("/producer/Ahu.png"));			//ÈòøËÉ°
                 Image Ahu = iAhu.getImage();
                 if((moveP.getX()>=0 && moveP.getX()<=320) && (moveP.getY()>=0 && moveP.getY()<=320))
                 	g.drawImage(Ahu, 0, 0, null);
                 
-                ImageIcon iSY = new ImageIcon(getClass().getResource("/producer/SY.png"));			//ÀÔÏœ
+                ImageIcon iSY = new ImageIcon(getClass().getResource("/producer/SY.png"));			//Â≠ôÁÖú
                 Image SY = iSY.getImage();
                 if((moveP.getX()>=320 && moveP.getX()<=640) && (moveP.getY()>=0 && moveP.getY()<=320))
                 	g.drawImage(SY, 320, 0, null);
@@ -317,10 +317,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 if((checkP.getX()>=292 && checkP.getX()<=343) && (checkP.getY()>=292 && checkP.getY()<=343))
                 	setMenuMode(5);
             }
-            else if(menuMode == 6){						//ÕÀ≥ˆ
+            else if(menuMode == 6){						//ÈÄÄÂá∫
             	System.exit(0);
             }
-            else if(menuMode==5){							//±Í∏Á
+            else if(menuMode==5){							//Ê†áÂì•
                 ImageIcon iAbiao = new ImageIcon(getClass().getResource("/producer/Abiao.png"));
                 Image Abiao = iAbiao.getImage();
                 g.drawImage(Abiao, 0,0,null);
@@ -329,22 +329,22 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             	}
             }
             //TODO
-            else if(menuMode == 1)						//—°»ÀΩÁ√Ê
+            else if(menuMode == 1)						//ÈÄâ‰∫∫ÁïåÈù¢
             {
-                g.drawString("0912 ±©◊ﬂµØƒª", 64, 64);
-                g.drawString("∞¥zø™ º”Œœ∑", 233, 64);
-                if(player.getColor() == 'w')			//Œ◊≈Æ
+                g.drawString("0912 Êö¥Ëµ∞ÂºπÂπï", 64, 64);
+                g.drawString("ÊåâzÂºÄÂßãÊ∏∏Êàè", 233, 64);
+                if(player.getColor() == 'w')			//Â∑´Â•≥
                 {
-                	g.drawImage(redwhitebak, 0, 0,null);		//ª≠±≥æ∞
-                    g.drawImage(show,160, 160, 640, 640,482,0,960,480,null);//ª≠»ÀŒÔ
+                	g.drawImage(redwhitebak, 0, 0,null);		//ÁîªËÉåÊôØ
+                    g.drawImage(show,160, 160, 640, 640,482,0,960,480,null);//Áîª‰∫∫Áâ©
                     if(getKeys.right){
                         player.setData(240D, 360D, 0.0D, 0.0D, 4, 0, 0, 5, 'c');
                         NowCharacter='c';
                         }
-                } else									//Á˜¬∂≈µ
+                } else									//Áê™Èú≤ËØ∫
                 {
-                	g.drawImage(_9bak, 0, 0,null);				//ª≠±≥æ∞
-                    g.drawImage(show,0, 160, 480, 640,0,0,480,480,null);//ª≠»ÀŒÔ
+                	g.drawImage(_9bak, 0, 0,null);				//ÁîªËÉåÊôØ
+                    g.drawImage(show,0, 160, 480, 640,0,0,480,480,null);//Áîª‰∫∫Áâ©
                     
                     if(getKeys.left){
                         player.setData(240D, 360D, 0.0D, 0.0D, 4, 0, 0, 5, 'w');
@@ -354,7 +354,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 if(getKeys.z)
                     menuMode = 0;
             } 
-            else  if(menuMode == 2)					//‘›Õ£ΩÁ√Ê
+            else  if(menuMode == 2)					//ÊöÇÂÅúÁïåÈù¢
             {
                 ImageIcon iStop = new ImageIcon(getClass().getResource("/image/Stop.png"));		
                 Image Stop = iStop.getImage();
@@ -362,7 +362,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 if(getKeys.z)
                     menuMode = 0;
             } else
-            if(menuMode == 3)					//bossÀ¿Õˆ
+            if(menuMode == 3)					//bossÊ≠ª‰∫°
             {
                 ImageIcon icc = new ImageIcon(getClass().getResource("/image/win.png"));		
                 Image win = icc.getImage();
@@ -372,7 +372,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
 //            	if((moveP.getX()>=363 && moveP.getX()<=585) && (moveP.getY()>=501 && moveP.getY()<=596))
 //            		g.drawRect(363, 501, 222, 95);
             }
-            if(menuMode == 4)					//ÕÊº“À¿Õˆ
+            if(menuMode == 4)					//Áé©ÂÆ∂Ê≠ª‰∫°
             {
                 ImageIcon icc = new ImageIcon(getClass().getResource("/image/loss.png"));		
                 Image loss = icc.getImage();
@@ -407,7 +407,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             gameUpdate();
             gameRender();
             paintScreen();
-            ////////////////////∆¡ƒªÀØ√ﬂ///////////////
+            ////////////////////Â±èÂπïÁù°Áú†///////////////
             try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
@@ -419,7 +419,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             	gameReset();
             	setMenuMode(9);	
             }
-            if(!player.getExist())							//ÕÊº“÷ÆÀ¿
+            if(!player.getExist())							//Áé©ÂÆ∂‰πãÊ≠ª
             {
             	setMenuMode(4);
             } 
@@ -452,7 +452,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
     private int menuMode;
     private Thread gameLoop;
     public Image show;
-    public char NowCharacter='w';			//µ±«∞—°‘ÒΩ«…´
+    public char NowCharacter='w';			//ÂΩìÂâçÈÄâÊã©ËßíËâ≤
     public Image _9bak,redwhitebak;
     public Point checkP;
     public Point moveP=new Point(0,0);
