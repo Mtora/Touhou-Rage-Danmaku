@@ -53,7 +53,7 @@ public class SuperObject
     {
         px += vx;
         py += vy;
-        frame++;					//√ø¥Œ“∆∂Ø «frame+1
+        frame++;					//ÊØèÊ¨°ÁßªÂä®ÊòØframe+1
         if(px < 0.0D || py < 0.0D || px > 640D || py > 640D)
             exist = false;
     }
@@ -64,32 +64,32 @@ public class SuperObject
             return;
         int c = 0;
  //       boolean flag = false;
-        if(color == 'g')						//¬ÃµØµØ
+        if(color == 'g')						//ÁªøÂºπÂºπ
             c = 65;
-        if(color == 'b')						//¿∂µØµØ
+        if(color == 'b')						//ËìùÂºπÂºπ
             c = 128;
-        if(color == 'c')					//±øµ∞
+        if(color == 'c')					//Á¨®Ëõã
             c = 194;
-        if(color == 'w')					//Œ◊≈Æ
+        if(color == 'w')					//Â∑´Â•≥
             c = 224;
-        if(color == 'h')					//–°∫⁄
+        if(color == 'h')					//Â∞èÈªë
             c = 256;
-        if(color == 'p')					//‡€‡€
+        if(color == 'p')					//ÂôóÂôó
             c = 320;
         if(color == 'x')
         	c=10;
 /////////////////////////////////////TODO
-        if(size <= 32)							//–°±∆size
+        if(size <= 32)							//Â∞èÈÄºsize
         {
             int i = ((size / 4 - 1)) * 32;
             g.drawImage(p.image, (int)px - 16, (int)py - 16, (int)px + 16, (int)py + 16, c, i, c + 32, i + 32, null);
         } 
 
-       ////////////////////////////////////////////////////////¥Û¿–±∆size
-        	if(size==100){										//∆’Õ®◊¥Ã¨
+       ////////////////////////////////////////////////////////Â§ß‰Ω¨ÈÄºsize
+        	if(size==100){										//ÊôÆÈÄöÁä∂ÊÄÅ
         		g.drawImage(p.image, (int)px - 32, (int)py - 32, (int)px + 32, (int)py + 32, 195, 449, 255, 510, null);
         	}
-        	else if(size>100&&size<200)									//øÒ≈≠◊¥Ã¨
+        	else if(size>100&&size<200)									//ÁãÇÊÄíÁä∂ÊÄÅ
         		g.drawImage(p.image, (int)px - 32, (int)py - 32, (int)px + 32, (int)py + 32, 259, 449, 319, 510, null);
         }
 
