@@ -62,3 +62,4 @@ public class GetKeys
     public boolean f12;
     public boolean esc;
 }
+
