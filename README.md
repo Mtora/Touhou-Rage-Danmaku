@@ -7,8 +7,8 @@
 ####◎自机弹幕效果<br>
 ![灵梦d](http://i12.tietuku.com/b54d866a7f619e98t.jpg)  ![琪露诺d](http://i12.tietuku.com/88713cce0fcf9800t.jpg)<br>
 ####◎游戏操作<br>
-Z：射击
-X：取消
-X：全屏符卡消弹
-Shift：擦弹缓动
-Esc：暂停
+Z：射击<br>
+X：取消<br>
+X：全屏符卡消弹<br>
+Shift：擦弹缓动<br>
+Esc：暂停<br>
