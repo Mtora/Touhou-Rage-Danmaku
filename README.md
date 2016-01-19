@@ -1,4 +1,4 @@
-<div align="center"><b>Touhou-Rage-Danmoku/東方暴走彈幕</b></div>
+<div align="center"><b>Touhou-Rage-Danmaku/東方暴走彈幕</b></div>
 ####一款东方project风格弹幕游戏<br>
 ####◎菜单选择界面<br>
 ![封面](http://i12.tietuku.com/dee59a4b4a628a38t.jpg)<br>
