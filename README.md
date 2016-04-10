@@ -6,12 +6,12 @@
 ● 暂时提供两个角色：灵梦/⑨<br>
 ● X返回菜单界面<br>
 <br>
-![灵梦](http://i12.tietuku.cn/8fae6ae36eb9f818t.jpg)  ![琪露诺](http://i12.tietuku.cn/7630282d864e2c3et.jpg)<br>
+![灵梦](http://i2.piimg.com/8fae6ae36eb9f818t.jpg)  ![琪露诺](http://i12.tietuku.cn/7630282d864e2c3et.jpg)<br>
 ####◎自机弹幕效果<br>
 ● 灵梦：扇形弹幕<br>
 ● ⑨：集束弹幕<br>
 <br>
-![灵梦d](http://i12.tietuku.cn/b54d866a7f619e98t.jpg)  ![琪露诺d](http://i12.tietuku.cn/88713cce0fcf9800t.jpg)<br>
+![灵梦d](http://i2.piimg.com/b54d866a7f619e98t.jpg)  ![琪露诺d](http://i12.tietuku.cn/88713cce0fcf9800t.jpg)<br>
 ####◎BOSS关卡<br>
 ● 普通状态<br>
 <br>
