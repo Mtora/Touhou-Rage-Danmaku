@@ -1,7 +1,7 @@
 <div align="center"><b>Touhou-Rage-Danmaku/東方暴走彈幕</b></div>
 ####一款东方project风格弹幕游戏<br>
 ####◎菜单选择界面<br>
-![封面](http://i12.tietuku.cn/dee59a4b4a628a38t.jpg)<br>
+![封面](http://tora-im-static.smartgslb.com/dm/dm1.png)<br>
 ####◎角色选择界面<br>
 ● 暂时提供两个角色：灵梦/⑨<br>
 ● X返回菜单界面<br>
