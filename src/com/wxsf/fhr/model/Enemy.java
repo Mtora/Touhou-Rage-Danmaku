@@ -40,7 +40,7 @@ public class Enemy extends SuperObject
             }
         } else
 
-        if(type == 100)										//´óÀÐ±Æ
+        if(type == 100)										//´óboss
         {
             if(life > 1600)
             {

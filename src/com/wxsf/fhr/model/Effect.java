@@ -27,7 +27,7 @@ public class Effect extends SuperObject
             return;
         ////////////////////////////////////////////////////////////×²»÷Ð§¹û»æÖÆ
         ImageIcon imageicon = new ImageIcon(getClass().getResource("/image/fire.png"));
-        Image image = imageicon.getImage(); 
+        Image image = imageicon.getImage();
         g.drawImage(image, (int)px - size / 2, (int)py - size / 2, (int)px + size / 2, (int)py + size / 2, 0, 0, 40, 40, null);
     }
 }
