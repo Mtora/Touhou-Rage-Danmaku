@@ -32,7 +32,7 @@ public class SuperObject
         type = k;
         life = l;
         color = c;
-        exist = true; 
+        exist = true;
     }//th = Math.toRadians(-9D);
 
     public double setTh(double d, double d1)
@@ -79,13 +79,13 @@ public class SuperObject
         if(color == 'x')
         	c=10;
 /////////////////////////////////////TODO
-        if(size <= 32)							//小逼size
+        if(size <= 32)							//小boss
         {
             int i = ((size / 4 - 1)) * 32;
             g.drawImage(p.image, (int)px - 16, (int)py - 16, (int)px + 16, (int)py + 16, c, i, c + 32, i + 32, null);
-        } 
+        }
 
-       ////////////////////////////////////////////////////////大佬逼size
+       ////////////////////////////////////////////////////////大boss
         	if(size==100){										//普通状态
         		g.drawImage(p.image, (int)px - 32, (int)py - 32, (int)px + 32, (int)py + 32, 195, 449, 255, 510, null);
         	}

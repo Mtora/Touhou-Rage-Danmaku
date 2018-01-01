@@ -28,7 +28,7 @@ public class Enemy extends SuperObject
                     tmp.setData(px, py, Math.cos(th) * 6D, Math.sin(th) * 6D, 20, 0, 0, 0, 'b');
             }
         } else
-        	
+
         if(type == 3)											//àÛàÛàÛ
         {
             if(frame % 15 == 0)
@@ -39,7 +39,7 @@ public class Enemy extends SuperObject
                         tmp.setData(px, py, Math.cos(Math.toRadians((double)i + c0)) * 6D, Math.sin(Math.toRadians((double)i + c0)) * 6D, 20, 0, 0, 0, 'g');
             }
         } else
-        	
+
         if(type == 100)										//´óÀÐ±Æ
         {
             if(life > 1600)
@@ -80,8 +80,8 @@ public class Enemy extends SuperObject
 
                 }
             }
-        } 
-        
+        }
+
         for(int j6 = 0; j6 < p.shoots.getArrayMax(); j6++)			//×²»÷
         {
             if(!(tmp = p.shoots.getObject(j6)).getExist()|| Math.hypot(px - tmp.getPx(), py - tmp.getPy()) >= (double)((size + tmp.getSize()) / 2))

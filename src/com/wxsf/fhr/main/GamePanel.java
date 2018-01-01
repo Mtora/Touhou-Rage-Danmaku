@@ -44,7 +44,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
         {
             Ashoot[j] = Applet.newAudioClip(getClass().getResource("/sound/shoot.wav"));
             Ashoot1[j] = Applet.newAudioClip(getClass().getResource("/sound/shoot1.wav"));
-        }   		
+        }
         Acrash=Applet.newAudioClip(getClass().getResource("/sound/crash.wav"));
         APirate=Applet.newAudioClip(getClass().getResource("/sound/Mission Impossible Theme.wav"));
         AbossDead1=Applet.newAudioClip(getClass().getResource("/sound/bossDead1.wav"));
@@ -79,9 +79,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
     public void mouseMoved(MouseEvent e){
     	moveP=e.getPoint();
     }
-    
+
     public void mouseDragged(MouseEvent e){
-    	
+
     }
     ////////////////MouseListener////////////////////////
     public void mouseClicked(MouseEvent e){
@@ -91,7 +91,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
 
     }
     public void mouseExited(MouseEvent e){
-    	
+
     }
     public void mousePressed(MouseEvent e){
     	checkP=e.getPoint();
@@ -108,28 +108,28 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
     	}
     	//说明//////////////////////
     	if(menuMode==8){
-        	if((checkP.getX()>=486 && checkP.getX()<=600) && (checkP.getY()>=550 && checkP.getY()<=600))	
+        	if((checkP.getX()>=486 && checkP.getX()<=600) && (checkP.getY()>=550 && checkP.getY()<=600))
         		setMenuMode(9);
     	}
         if(menuMode == 3)					//boss死亡
         {
         	gameSet();
-        	if((checkP.getX()>=60 && checkP.getX()<=236) && (checkP.getY()>=509 && checkP.getY()<=593))	
+        	if((checkP.getX()>=60 && checkP.getX()<=236) && (checkP.getY()>=509 && checkP.getY()<=593))
         		setMenuMode(0);
-        	if((checkP.getX()>=363 && checkP.getX()<=585) && (checkP.getY()>=501 && checkP.getY()<=596))	
+        	if((checkP.getX()>=363 && checkP.getX()<=585) && (checkP.getY()>=501 && checkP.getY()<=596))
         		setMenuMode(9);
         }
         if(menuMode == 4)					//玩家死亡
         {
         	gameSet();
-        	if((checkP.getX()>=60 && checkP.getX()<=236) && (checkP.getY()>=509 && checkP.getY()<=593))	
+        	if((checkP.getX()>=60 && checkP.getX()<=236) && (checkP.getY()>=509 && checkP.getY()<=593))
         		setMenuMode(0);
-        	if((checkP.getX()>=363 && checkP.getX()<=585) && (checkP.getY()>=501 && checkP.getY()<=596))	
+        	if((checkP.getX()>=363 && checkP.getX()<=585) && (checkP.getY()>=501 && checkP.getY()<=596))
         		setMenuMode(9);
         }
     }
     public void mouseReleased(MouseEvent e){
-    	
+
     }
     public void gameSet()					//游戏初次载入
     {
@@ -154,7 +154,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
         effects.allErase();
     }
 
-    private void gameUpdate()		
+    private void gameUpdate()
     {
         if(menuMode == 0)
         {
@@ -176,8 +176,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             if(dbImage == null)
                 return;
             g = dbImage.getGraphics();
-        }			
-        ///////////////////////循环背景//////////////////////////////	
+        }
+        ///////////////////////循环背景//////////////////////////////
         backLoop = (backLoop + 8) % 640;			//每帧下移8像素，累积移动超过640像素取余为初始数重新累计
         for(int i = -1; i < 2; i++)
         {
@@ -241,7 +241,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
         Image ipowerbar=powerbar.getImage();
         g.drawImage(ipowerbar, 520, 600-(player.getPower()/5), 620, 600, 0, (100-player.getPower()/5), 100, 100, null);
         g.drawImage(ibloodbox, 519, 499, null);
-        
+
         if(menuMode != 0)
         {
             g.setColor(Color.BLACK);
@@ -285,32 +285,32 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 if((moveP.getX()>=486 && moveP.getX()<=600) && (moveP.getY()>=550 && moveP.getY()<=600))
                 	g.drawRect(486, 550, 114, 50);
             	}
-            
+
             else if(menuMode == 7){						//制作者
                 ImageIcon imageicon = new ImageIcon(getClass().getResource("/producer/Staff.png"));
                 Image staff = imageicon.getImage();
                 g.drawImage(staff, 0,0,null);
-             
+
                 ImageIcon iET = new ImageIcon(getClass().getResource("/producer/ET.png"));			//ET
                 Image ET = iET.getImage();
                 if((moveP.getX()>=320 && moveP.getX()<=640) && (moveP.getY()>=320 && moveP.getY()<=640))
                 	g.drawImage(ET, 320, 320, null);
-                
-                ImageIcon iPanda = new ImageIcon(getClass().getResource("/producer/Panda.png"));			//大叔
+
+                ImageIcon iPanda = new ImageIcon(getClass().getResource("/producer/Panda.png"));
                 Image Panda = iPanda.getImage();
                 if((moveP.getX()>=0 && moveP.getX()<=320) && (moveP.getY()>=320 && moveP.getY()<=640))
                 	g.drawImage(Panda, 0, 320, null);
-                
-                ImageIcon iAhu = new ImageIcon(getClass().getResource("/producer/Ahu.png"));			//阿胡
+
+                ImageIcon iAhu = new ImageIcon(getClass().getResource("/producer/Ahu.png"));
                 Image Ahu = iAhu.getImage();
                 if((moveP.getX()>=0 && moveP.getX()<=320) && (moveP.getY()>=0 && moveP.getY()<=320))
                 	g.drawImage(Ahu, 0, 0, null);
-                
-                ImageIcon iSY = new ImageIcon(getClass().getResource("/producer/SY.png"));			//孙煜
+
+                ImageIcon iSY = new ImageIcon(getClass().getResource("/producer/SY.png"));
                 Image SY = iSY.getImage();
                 if((moveP.getX()>=320 && moveP.getX()<=640) && (moveP.getY()>=0 && moveP.getY()<=320))
                 	g.drawImage(SY, 320, 0, null);
-                
+
                 ImageIcon icheckMe = new ImageIcon(getClass().getResource("/producer/checkMe.png"));
                 Image checkMe = icheckMe.getImage();
                 g.drawImage(checkMe, 292,292,null);
@@ -320,7 +320,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             else if(menuMode == 6){						//退出
             	System.exit(0);
             }
-            else if(menuMode==5){							//标哥
+            else if(menuMode==5){
                 ImageIcon iAbiao = new ImageIcon(getClass().getResource("/producer/Abiao.png"));
                 Image Abiao = iAbiao.getImage();
                 g.drawImage(Abiao, 0,0,null);
@@ -345,7 +345,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 {
                 	g.drawImage(_9bak, 0, 0,null);				//画背景
                     g.drawImage(show,0, 160, 480, 640,0,0,480,480,null);//画人物
-                    
+
                     if(getKeys.left){
                         player.setData(240D, 360D, 0.0D, 0.0D, 4, 0, 0, 5, 'w');
                         NowCharacter='w';
@@ -353,10 +353,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
                 }
                 if(getKeys.z)
                     menuMode = 0;
-            } 
+            }
             else  if(menuMode == 2)					//暂停界面
             {
-                ImageIcon iStop = new ImageIcon(getClass().getResource("/image/Stop.png"));		
+                ImageIcon iStop = new ImageIcon(getClass().getResource("/image/Stop.png"));
                 Image Stop = iStop.getImage();
                 g.drawImage(Stop, 0,0,null);
                 if(getKeys.z)
@@ -364,20 +364,20 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             } else
             if(menuMode == 3)					//boss死亡
             {
-                ImageIcon icc = new ImageIcon(getClass().getResource("/image/win.png"));		
+                ImageIcon icc = new ImageIcon(getClass().getResource("/image/win.png"));
                 Image win = icc.getImage();
                 g.drawImage(win, 0,0,null);
-//            	if((moveP.getX()>=60 && moveP.getX()<=236) && (moveP.getY()>=496 && moveP.getY()<=593))	
+//            	if((moveP.getX()>=60 && moveP.getX()<=236) && (moveP.getY()>=496 && moveP.getY()<=593))
 //            		g.drawRect(60, 496, 171, 97);
 //            	if((moveP.getX()>=363 && moveP.getX()<=585) && (moveP.getY()>=501 && moveP.getY()<=596))
 //            		g.drawRect(363, 501, 222, 95);
             }
             if(menuMode == 4)					//玩家死亡
             {
-                ImageIcon icc = new ImageIcon(getClass().getResource("/image/loss.png"));		
+                ImageIcon icc = new ImageIcon(getClass().getResource("/image/loss.png"));
                 Image loss = icc.getImage();
                 g.drawImage(loss, 0,0,null);
-//            	if((moveP.getX()>=60 && moveP.getX()<=236) && (moveP.getY()>=496 && moveP.getY()<=593))	
+//            	if((moveP.getX()>=60 && moveP.getX()<=236) && (moveP.getY()>=496 && moveP.getY()<=593))
 //            		g.drawRect(60, 496, 171, 97);
 //            	if((moveP.getX()>=363 && moveP.getX()<=585) && (moveP.getY()>=501 && moveP.getY()<=596))
 //            		g.drawRect(363, 501, 222, 95);
@@ -417,12 +417,12 @@ public class GamePanel extends JPanel implements Runnable, KeyListener,MouseMoti
             ////////////////////////////////////////
             if(getKeys.f12){
             	gameReset();
-            	setMenuMode(9);	
+            	setMenuMode(9);
             }
             if(!player.getExist())							//玩家之死
             {
             	setMenuMode(4);
-            } 
+            }
         } while(true);
         System.exit(0);
     }
